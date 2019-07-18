@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HeaderView" customModule="ADNews" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbP-ii-aXx">
+                    <rect key="frame" x="16" y="64" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="am2-qS-EYy"/>
+                        <constraint firstAttribute="height" constant="24" id="j79-Ny-iRF"/>
+                    </constraints>
+                    <state key="normal" image="menu_icon"/>
+                    <connections>
+                        <action selector="menuButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="lYR-ej-0ks"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rT-f3-IbA">
+                    <rect key="frame" x="335" y="64" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="6Kc-E2-ezM"/>
+                        <constraint firstAttribute="width" constant="24" id="epR-Im-z4P"/>
+                    </constraints>
+                    <state key="normal" image="search_icon"/>
+                    <connections>
+                        <action selector="searchButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="dQw-Nq-gPe"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AT9-fY-1A6">
+                    <rect key="frame" x="311" y="64" width="8" height="24"/>
+                    <state key="normal" image="actions_icon"/>
+                    <connections>
+                        <action selector="actionButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="jXn-cp-aT4"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKM-Cs-t0G">
+                    <rect key="frame" x="54" y="62" width="56" height="28"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.4108064233" green="0.67730388659999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="AT9-fY-1A6" firstAttribute="top" secondItem="4rT-f3-IbA" secondAttribute="top" id="Dke-4K-5gv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ZbP-ii-aXx" secondAttribute="bottom" constant="12" id="Gzu-MK-w2m"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="4rT-f3-IbA" secondAttribute="bottom" constant="12" id="IKA-L8-nkV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4rT-f3-IbA" secondAttribute="trailing" constant="16" id="QiF-UR-Icb"/>
+                <constraint firstItem="4rT-f3-IbA" firstAttribute="leading" secondItem="AT9-fY-1A6" secondAttribute="trailing" constant="16" id="Ri1-bw-IDe"/>
+                <constraint firstItem="DKM-Cs-t0G" firstAttribute="leading" secondItem="ZbP-ii-aXx" secondAttribute="trailing" constant="14" id="Tpb-UL-0Dy"/>
+                <constraint firstItem="ZbP-ii-aXx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="iR2-WH-Hav"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="DKM-Cs-t0G" secondAttribute="bottom" constant="10" id="zsA-yZ-BGm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="actionButton" destination="AT9-fY-1A6" id="swm-Ya-MpX"/>
+                <outlet property="headerTitle" destination="DKM-Cs-t0G" id="1gF-h7-4OT"/>
+                <outlet property="menuButton" destination="ZbP-ii-aXx" id="dPc-60-qML"/>
+                <outlet property="searchButton" destination="4rT-f3-IbA" id="Rnm-ap-Lnj"/>
+            </connections>
+            <point key="canvasLocation" x="64.799999999999997" y="-205.09745127436284"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="actions_icon" width="8" height="24"/>
+        <image name="menu_icon" width="24" height="22"/>
+        <image name="search_icon" width="24" height="24"/>
+    </resources>
+</document>
